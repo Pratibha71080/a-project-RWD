@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+  <h2>Student Registration Form</h2>
+
+  <form>
+    <label>First Name</label>
+    <input type="text" name="first_name" required>
+
+    <label>Last Name</label>
+    <input type="text" name="last_name" required>
+
+    <label>Father's Name</label>
+    <input type="text" name="father_name" required>
+
+    <label>Mother's Name</label>
+    <input type="text" name="mother_name" required>
+
+    <label>Email ID</label>
+    <input type="email" name="email" required>
+
+    <label>Phone Number</label>
+    <input type="tel" name="phone" required>
+
+    <label>Address</label>
+    <textarea name="address" rows="3" required></textarea>
+
+    <label>Pin Code</label>
+    <input type="text" name="pincode" required>
+
+    <label>🗓 Date of Birth</label>
+    <input type="date" name="dob" required>
+
+    <label>🚻 Gender:</label>
+    <div class="gender">
+      <label><input type="radio" name="gender" value="male"> Male</label>
+      <label><input type="radio" name="gender" value="female"> Female</label>
+      <label><input type="radio" name="gender" value="other"> Other</label>
+    </div>
+
+    <label>🩸 Blood Group:</label>
+    <select name="blood_group" required>
+      <option value="">Select</option>
+      <option value="A+">A+</option>
+      <option value="A-">A-</option>
+      <option value="B+">B+</option>
+      <option value="B-">B-</option>
+      <option value="O+">O+</option>
+      <option value="O-">O-</option>
+      <option value="AB+">AB+</option>
+      <option value="AB-">AB-</option>
+    </select>
+
+    <label>📷 Upload Photo:</label>
+    <input type="file" name="photo">
+
+    <label>🏫 Department:</label>
+    <div class="department">
+      <label><input type="radio" name="department" value="CSE"> CSE</label>
+      <label><input type="radio" name="department" value="EEE"> EEE</label>
+      <label><input type="radio" name="department" value="BCA"> BCA</label>
+      <label><input type="radio" name="department" value="BCS"> BCS</label>
+    </div>
+
+    <label>📚 Course:</label>
+    <div class="courses">
+      <label><input type="checkbox" name="course" value="HTML"> HTML</label>
+      <label><input type="checkbox" name="course" value="CSS"> CSS</label>
+      <label><input type="checkbox" name="course" value="JavaScript"> JAVA SCRIPT</label>
+      <label><input type="checkbox" name="course" value="Bootstrap"> BOOT STRAP</label>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>
