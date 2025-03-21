@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width, initial-scale=1.0">
+    
+    <title> ONLINE FORM</title>
+
+    <style>
+                   
+        body 
+            {
+                display: flex; justify-content: center;
+                background-color: rgb(66, 128, 108);
+                color: #6908bd;
+            }
+
+            .course-container 
+            {
+            display: flex;
+            align-items: center;
+            gap: 15px; /* Space between label and checkboxes */
+            }
+
+            .department-container 
+            {
+            display: flex;
+            align-items: center;
+            gap: 15px; /* Space between label and radio buttons */
+            }
+
+            .upload-container 
+            {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Space between label and input */
+            }
+
+            .blood-group-container 
+            {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Space between label and dropdown */
+            }
+
+            .gender-container 
+            {
+            display: flex;
+            align-items: center;
+            gap: 15px; /* Space between label and radio buttons */
+            }
+
+            .dob-container 
+            {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Space between label and input */
+            }
+
+
+        
+        .container 
+            {
+            background-color: rgb(174, 242, 242);
+            opacity: 1;  
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow:  5px #5b5d4e1a;
+            width: 700px;
+            height:700px;
+            
+            }
+        /*    
+        label 
+            {
+            font-weight: bold ;font-size:x-large;color: #1c16bfe5;
+            }
+        
+        input, select 
+            {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border: 2px solid #1c16bfe5;
+            border-radius: 5px;
+            }
+        */
+
+        
+            button 
+            {
+            width: 100%;
+            background-color: #4e80ec;
+            border-color:  #de2df5e5;
+            padding: 5px;
+            border-width: 5px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bolder;
+            font-size: larger;
+            }
+        button:hover 
+            {
+            background-color: #45ca62;
+            }
+
+    </style>
+
+    
+</head>
+
+<body>
+    <!--
+    <marquee  direction="left" bgcolor="#DDA0DD"><h1>LEARNING HUB COMPUTER CENTER</h1></marquee><hr><hr>
+    <Marquee direction="up" bgcolor="#808000" align="CENTER"><h2> ONLINE REGISTRATION FORM</h2> </Marquee><hr><hr>
+   -->
+      
+<div class="container">
+    <h1 style="text-align: center; color:  #112a9be5 ; margin: 2px 0; font: size 50px;">Student Registration Form</h1><br><br>
+    <form action="submit_form.php" method="post" style="max-width: 400px; margin:auto;">
+    
+        
+        <div class="name-fields">
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+            <br><br><br>
+                <input type="text" placeholder="Father's Name">
+                <input type="text" placeholder="Mother's Name">
+            <br><br><br>
+                <input type="text" placeholder="Email Id">
+                <input type="number" placeholder="Phone Number">
+           <br><br><br>
+                <input type="text" placeholder="Address">
+                <input type="number" placeholder="Pin Code">
+        </div><br><br>
+
+        <!--
+        <div>
+            <h5>🗓 Date of birth</h5><input type="date">
+        </div>
+        -->
+
+        <div class="dob-container">
+            <label for="dob">🗓 Date of Birth</label>
+            <input type="date" id="dob">
+        </div><br><br>
+    
+
+        <!--
+        <div class="form-row">
+            <span class="form-label"><h5>🚻 Gender:</h5></span>
+            <span class="form-options">
+                <label><input type="radio" name="gender" value="male"> (a) Male</label>
+                <label><input type="radio" name="gender" value="female"> (b) Female</label>
+                <label><input type="radio" name="gender" value="other"> (c) Other</label>
+            </span>
+        </div>
+        -->
+        <div class="gender-container">
+            <label>🚻 Gender:</label>
+            <label><input type="radio" name="gender" value="male"> (a) Male</label>
+            <label><input type="radio" name="gender" value="female"> (b) Female</label>
+            <label><input type="radio" name="gender" value="other"> (c) Other</label>
+        </div><br><br>
+
+        <!--
+        <div class="form-row">
+            <span class="form-label"><h5>🩸 Blood Group:</h5></span>
+            <span class="form-options">
+                <select name="blood group">
+                    <option >Blood group</option>                                         
+                    <option >A+</option>
+                    <option >A-</option>
+                    <option >B+</option>
+                    <option >B-</option>
+                    <option >O+</option>
+                    <option >O-</option>
+                    <option >AB+</option>
+                    <option >AB-</option>
+                 </select>   
+        </div>
+        -->
+
+        <div class="blood-group-container">
+            <label for="blood-group">🩸 Blood Group:</label>
+            <select id="blood-group">
+                <option value="" disabled selected>Select</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+            </select>
+        </div><br><br>
+<!-- gender in table formate
+<table>
+    <tr>
+        <td>🩸 Blood Group:</td>
+        <td>
+            <select>
+                <option value="" disabled selected>Select</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+            </select>
+        </td>
+    </tr>
+</table
+-->
+        <!--
+        <div>
+        <h4>Upload Photo</h4><input type="file">
+        </div>
+        -->
+        <div class="upload-container">
+            <label for="photo">📷 Upload Photo:</label>
+            <input type="file" id="photo">
+        </div><br><br>
+        
+        <!--
+        <div class="form-row">
+            <span class="form-options"></span>
+            <span class="form-label"><h5>Department:</h5></span>
+                <label><input type="radio" name="department" value="CSE"> (a) CSE</label>
+                <label><input type="radio" name="department" value="EEE"> (b) EEE</label>
+                <label><input type="radio" name="department" value="BCA"> (c) BCA</label>
+                <label><input type="radio" name="department" value="BSC"> (c) BCS</label>
+            </span>  
+        </div>
+        -->
+
+        <div class="department-container">
+            <label>🏫 Department:</label>
+            <label><input type="radio" name="department" value="cse"> (a) CSE</label>
+            <label><input type="radio" name="department" value="eee"> (b) EEE</label>
+            <label><input type="radio" name="department" value="bca"> (c) BCA</label>
+            <label><input type="radio" name="department" value="bcs"> (d) BCS</label>   
+        </div><br><br>
+    
+        <!--
+        <div>
+        <h5>Course:</h5>
+        <h4>
+            HTML <input type="checkbox">
+            CSS <input type="checkbox">
+            JAVA SCRIPT <input type="checkbox">
+            BOOT STRAP <input type="checkbox">
+        </h4>
+    </div>
+        -->
+        <div class="course-container">
+            <label>📚 Course:</label>
+            <label><input type="checkbox" name="course" value="html"> HTML</label>
+            <label><input type="checkbox" name="course" value="css"> CSS</label>
+            <label><input type="checkbox" name="course" value="javascript"> JAVA SCRIPT</label>
+        </div><br>
+        
+
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+
+
+</form>
+</body>
+</html>
